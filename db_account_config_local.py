@@ -1,8 +1,8 @@
 db_args = (
     "localhost",
     "root",
-    "xunmacao9707",
-    "team26"
+    "password",
+    "username"
     )
 db_argv = {
     'autocommit':True,
