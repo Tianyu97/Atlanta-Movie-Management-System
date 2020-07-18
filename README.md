@@ -16,7 +16,7 @@ flask, pymysql, requests
 1. You may need to create db_account_config_local.py and edit your connection strings
 As an template, db_account_config.py is the default config file. And you need to change
 password to your mysql password.
-2. cd team26_phase4\ and run python app.py
+2. cd project_folder\ and run python app.py
 3. Go to http://<localhost>:<port>/login.html on your browser and you should see our
 login web page.
 APP Technologies Used
