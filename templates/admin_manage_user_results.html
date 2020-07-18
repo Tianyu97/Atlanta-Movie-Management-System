@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Manage User Filter Results{% endblock %}
+
+{% block content %}
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+
+
+<div class="card form-card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Admin Manage User Filter Results</center></h3>
+    </div>
+    <div class="card-body">
+        <form role="form" method="POST"> 
+            <h4>
+                All Results
+            </h4>
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th scope="col">Username</th>
+                    <th scope="col">Credit Card Count</th>
+                    <th scope="col">User Type</th>
+                    <th scope="col">Status</th>
+                    <!-- <th scope="col">Approve</th> -->
+                    <!-- <th scope="col">Decline</th> -->
+                </tr>
+                </thead>
+                <tbody>
+                {%for i in range(admin_manage_user_results[0]| length) %}
+                    <tr>
+                        <td scope="row">{{ admin_manage_user_results[0][i] }}</td>
+                        <td>{{ admin_manage_user_results[1][i] }}</td>
+                        <td>{{ admin_manage_user_results[3][i] }}</td>
+                        <td>{{ admin_manage_user_results[2][i] }}</td>
+                        <!-- <td><input type="checkbox" name='{{ admin_manage_user_results[0][i] }}approved' value = 1 id="includeNotPlayed"/></td> -->
+                        <!-- <td><input type="checkbox" name={{ admin_manage_user_results[0][i] }} value = 1 id="includeNotPlayed"/></td> -->
+                    </tr>
+                {% endfor %}
+
+
+                
+                </tbody>
+            </table>
+
+
+            <div class="form-group row">
+                    <label class="col-sm-3 col-form-label">Username</label>
+                    <select name="username" class="form-control col-sm-9">
+                        {% for it in admin_manage_user_results[0] %}
+                        <option>{{ it }}</option>
+                        {% endfor %}
+                    </select>
+            </div>
+
+            <p><input type="checkbox" name="Approve" value = 1 id="Approve"/>Approve</p>
+            <p><input type="checkbox" name="Decline" value = 1 id="Decline"/>Decline</p>
+
+            <div class="col-sm-6">
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

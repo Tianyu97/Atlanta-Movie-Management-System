@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}View History Filter Results{% endblock %}
+
+{% block content %}
+
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="card form-card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>View History Filter Results</center></h3>
+    </div>
+    <div class="card-body">
+        <h4>
+            All Results
+        </h4>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Theater</th>
+                <th scope="col">Address</th>
+                <th scope="col">Company</th>
+                <th scope="col">Visit Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {%for i in range(user_visit_history_results[0]| length) %}
+                <tr>
+                    <td scope="row">{{ user_visit_history_results[0][i] }}</td>
+                    <td>{{user_visit_history_results[1][i]}},{{user_visit_history_results[2][i]}},{{user_visit_history_results[3][i]}},{{user_visit_history_results[4][i]}}</td>
+                    <td>{{user_visit_history_results[5][i]}}</td>
+                    <td>{{user_visit_history_results[6][i][:-13]}}</td>
+                </tr>
+            {% endfor %}
+
+
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block title %}Admin Manage Company{% endblock %}
+{% block content %}
+
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="card form-card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Admin Manage Company</center></h3>
+    </div>
+    <div class="card-body">
+        <form role="form" method="post">
+
+            <div class="form-group row">
+                <label>Company</label>
+                <select name="comName" class="form-control" required>
+                    <option selected="selected">ALL</option>
+                    {% for it in COMPANY %}
+                    <option>{{it}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">#City Covered</label>
+                <div class="input-group col-sm-4">
+                    <div class="input-group-prepend"><span class="input-group-text">From</span></div>
+                    <input name="minCity" type="number" class="form-control" min="0" step="any" placeholder="0">
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="input-group col-sm-4">
+                    <div class="input-group-prepend"><span class="input-group-text">To</span></div>
+                    <input name="maxCity" type="number" class="form-control" min=minCity step="any" placeholder="100">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">#Theaters</label>
+                <div class="input-group col-sm-4">
+                    <div class="input-group-prepend"><span class="input-group-text">From</span></div>
+                    <input name="minTheater" type="number" class="form-control" min="0" step="any" placeholder="0">
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="input-group col-sm-4">
+                    <div class="input-group-prepend"><span class="input-group-text">To</span></div>
+                    <input name="maxTheater" type="number" class="form-control" min='0' step="any" placeholder="100">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">#Theaters</label>
+                <div class="input-group col-sm-4">
+                    <div class="input-group-prepend"><span class="input-group-text">From</span></div>
+                    <input name="minEmployee" type="number" class="form-control" min="0" step="any" placeholder="0">
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="input-group col-sm-4">
+                    <div class="input-group-prepend"><span class="input-group-text">To</span></div>
+                    <input name="maxEmployee" type="number" class="form-control" min="0" step="any" placeholder="100">
+                </div>
+            </div>
+
+
+
+            <div class="form-group row">
+                <label>SortedDirection</label>
+                <select name="sortDirection" class="form-control" required>
+                    <option selected="selected">ASC</option>
+                    <option>DESC</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <label>SortedBy</label>
+                <select name="sortBy" class="form-control" required>
+                    <option selected="selected">comName</option>
+                    <option>numCityCover</option>
+                    <option>numTheater</option>
+                    <option>numEmployee</option>
+                </select>
+            </div>
+
+            <div class="col-sm-15" style="margin-bottom: 10px; color:#FFF333" >
+                <button type="submit" class="btn btn-primary btn-block"><center>Filter</center></button>
+            </div>
+
+            <div class="col-sm-15" style="margin-bottom: 10px;">
+                <a class="btn btn-primary btn-block" href="admin_view_companydetail_pre.html"><span></span>
+                    View Existed Company Detail</a>
+            </div>
+
+            <div class="col-sm-15" style="margin-bottom: 10px;">
+                <a class="btn btn-primary btn-block" href="admin_create_theater.html"><span></span>
+                    Create Theater</a>
+            </div>
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}

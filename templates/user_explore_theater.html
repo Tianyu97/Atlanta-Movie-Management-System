@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Explore Theater{% endblock %}
+
+{% block content %}
+<!-- <div class="nav-item"><a class="nav-link" href="login.html"><span class="fa fa-sign-out-alt"></span> Logout -->
+    <div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+    </a></div>
+    <h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+
+<!-- <div class="login-card card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Theater Overview</center></h3> -->
+<div class="card form-card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Explore Theater</center></h3>
+    </div>
+    <div class="card-body">
+        <form role="form" method="POST">            
+
+            <div class="form-group_1">
+                <label>Theater Name</label>
+                <select name="thName" class="form-control" required>
+                    {% for it in THEATER %}
+                    <option>{{it}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+
+            <div class="form-group_1">
+                <label>Company</label>
+                <select name="comName" class="form-control" required>
+                    {% for it in COMPANY %}
+                    <option>{{it}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+            <div class="form-group_1">
+                <label>City</label>
+                <input name="thCity" type="text" class="form-control col-sm-9" placeholder="City" maxlength=45>
+            </div>
+
+
+            <div class="form-group_1">
+                <label>State</label>
+                <select name="thState" class="form-control" required>
+                    {% for it in STATE %}
+                    <option>{{it}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+
+
+            <!-- <input name="includeNotPlayed_default" type="hidden" value = 0> -->
+            <div class="form-group row"></div>
+            <div class="form-group row"></div>
+            <div class="form-group row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                 <button type="submit" class="btn btn-primary btn-block">Filter</button>
+            </div>
+            <div class="col-sm-3"></div>
+        </form>
+    </div>
+</div>
+{% endblock %}

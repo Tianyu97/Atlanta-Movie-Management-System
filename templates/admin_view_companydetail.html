@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Company Detail{% endblock %}
+
+{% block content %}
+<div class="card form-card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Company Detail</center></h3>
+    </div>
+    <div class="card-body">
+        <b>Name</b>
+        {{choose_company}}
+        <br></br>
+        <b>Employee</b>
+        {%for i in range(admin_view_companydetail_1[0]| length) %}
+
+        {{admin_view_companydetail_1[0][i]}}
+        {{admin_view_companydetail_1[1][i]}}
+
+        {% endfor %}
+        <h4>
+            <center>Theaters</center>
+        </h4>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Manager</th>
+                <th scope="col">City</th>
+                <th scope="col">State</th>
+                <th scope="col">Capacity</th>
+            </tr>
+            </thead>
+            <tbody>
+            {%for i in range(admin_view_companydetail[0]| length) %}
+                <tr>
+                    <td scope="row">{{admin_view_companydetail[0][i] }}</td>
+                    <td>{{ admin_view_companydetail[1][i] }}</td>
+                    <td>{{ admin_view_companydetail[2][i] }}</td>
+                    <td>{{ admin_view_companydetail[3][i] }}</td>
+                    <td>{{ admin_view_companydetail[4][i] }}</td>
+                </tr>
+            {% endfor %}
+
+
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+

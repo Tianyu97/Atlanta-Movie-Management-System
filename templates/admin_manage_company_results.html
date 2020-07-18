@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Manage Company Filter Results{% endblock %}
+
+{% block content %}
+
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+
+<div class="card form-card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Admin Manage Company Filter Results</center></h3>
+    </div>
+    <div class="card-body">
+        <h4>
+            All Results
+        </h4>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">#CityCovered</th>
+                <th scope="col">#Theaters</th>
+                <th scope="col">#employee</th>
+            </tr>
+            </thead>
+            <tbody>
+            {%for i in range(admin_manage_company_results[0]| length) %}
+                <tr>
+                    <td scope="row">{{ admin_manage_company_results[0][i] }}</td>
+                    <td>{{ admin_manage_company_results[1][i] }}</td>
+                    <td>{{ admin_manage_company_results[2][i] }}</td>
+                    <td>{{ admin_manage_company_results[3][i] }}</td>
+                </tr>
+            {% endfor %}
+
+
+
+
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+{% block title %}Manager-Only Registration{% endblock %}
+{% block content %}
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+
+<div class="form-card_1 card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Manager-Only Registration</center></h3>
+    </div>
+    <div class="card-body">
+        <form role="form" method="post">
+            <style>
+                .form-group {
+                    width:48%;
+                    margin: 1%;
+                    /* height:400px; */
+                    /* background-color:#0f0; */
+                    float:left;
+                }
+                .form-group_1{
+                    width:97%;
+                    margin:1%;
+                    float:left;
+                }
+                .form-group_2{
+                    width:28%;
+                    margin: 2%;
+                    float:left;
+                }
+            </style>
+
+            <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input class="form-control" placeholder="First Name" name="firstname" autofocus="" type="text"
+                       required="required" maxlength=50>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input class="form-control" placeholder="Last Name" name="lastname" autofocus="" type="text"
+                       required="required" maxlength=50>
+            </div>
+            <div class="form-group_1">
+                <i class="fa fa-user"></i>
+                <input class="form-control" placeholder="Username" name="username" autofocus="" type="text"
+                       required="required" maxlength=50>
+            </div>
+
+            <div class="form-group_1">
+                <i class="fa fa-building"></i>
+                <select name="comName" class="form-control" required>
+                    {% for it in COMPANY %}
+                    <option>{{it}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input class="form-control" placeholder="Password" name="password" value="" type="password"
+                       required="required" maxlength=50>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-lock"></i>
+                <input class="form-control " placeholder="Confirm Password" name="confirmpassword" value="" type="password"
+                       required="required" maxlength=50>
+            </div>
+
+            <div class="form-group_1">
+                <i class="fa fa-address-book" aria-hidden="true"></i>
+                <input class="form-control " placeholder="Street Address" name="empStreet" value="" type="text"
+                       required="required" maxlength=50>
+            </div>
+
+            <div class="form-group_1">
+                <i class="fa fa-address-book"></i>
+                <input class="form-control" placeholder="City" name="empCity" value="" type="text"
+                       required="required" maxlength=50>
+            </div>
+<!--            <div class="form-group">-->
+<!--                <i class="fa fa-address-book"></i>-->
+<!--                <input class="form-control " placeholder="State" name="empState" value="" type="text"-->
+<!--                       required="required" maxlength=50>-->
+<!--            </div>-->
+            <div class="form-group">
+                    <i class="fa fa-map-marker-alt"></i>
+                <select name="empState" class="form-control" required>
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AZ</option>
+                    <option>AR</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>IA</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>ME</option>
+                    <option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MO</option>
+                    <option>NE</option>
+                    <option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TD</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WV</option>
+                    <option>WI</option>
+                    <option>WY</option>
+                </select>
+            </div>
+            <div class="form-group">
+                    <i class="fa fa-map-marker-alt"></i>
+                <i></i>
+<!--                <label>Zipcode</label>-->
+                <input class="form-control " placeholder="Zipcode" name="empZipcode" value="" type="text"
+                       required="required" maxlength=5>
+            </div>
+
+            <div class="form-group_1">
+                <a class="btn btn-primary btn-block" href="register_navigation.html"><span></span>
+                    Back</a>
+            </div>
+            <div class="form-group_1">
+                <input type="submit" class="btn btn-primary btn-block" value="Register">
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

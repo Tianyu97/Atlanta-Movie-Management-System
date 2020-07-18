@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Registration Successfully{% endblock %}
+{% block content %}
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="login-card card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Congratulations!!!</center></h3>
+        <h5 class="title"><center>You have registered succesfully!!!</center></h5>
+        
+
+    </div>
+    <div class="card-body">
+            <div class="form-group row"></div>
+            <div class="form-group row"></div>
+            
+        <h6 class="title">Please press the button below and login</h6>
+    
+        <form role="form" method="post">
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" href="login.html"><span></span>
+                    Go Back to Login</a>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}

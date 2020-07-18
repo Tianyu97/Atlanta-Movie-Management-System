@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% block title %}Customer-Only Registration{% endblock %}
+{% block content %}
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="form-card_1 card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Customer-Only Registration</center></h3>
+    </div>
+    <div class="card-body">
+        <form role="form" method="post">
+            <style>
+                .form-group {
+                    width:48%;
+                    margin: 1%;
+                    /* height:400px; */
+                    /* background-color:#0f0; */
+                    float:left;
+                }
+                .form-group_1{
+                    width:100%;
+                    margin: 1%;
+                    float:left;
+                }
+            </style>
+
+            <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input class="form-control" placeholder="First Name" name="firstname" autofocus="" type="text"
+                       required="required" maxlength=45>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input class="form-control" placeholder="Last Name" name="lastname" autofocus="" type="text"
+                       required="required" maxlength=45>
+            </div>
+            <div class="form-group">
+                <i class="fa fa-user"></i>
+                <input class="form-control" placeholder="Username" name="username" autofocus="" type="text"
+                       required="required" maxlength=45>
+            </div>
+
+            <div class="form-group_1">
+                <i class="fa fa-lock"></i>
+                <input class="form-control" placeholder="Password" name="password" value="" type="password"
+                       required="required" maxlength=200>
+            </div>
+            <div class="form-group_1">
+                <i class="fa fa-lock"></i>
+                <input class="form-control " placeholder="Confirm Password" name="confirmpassword" value="" type="password"
+                       required="required" maxlength=200>
+            </div>
+            <div class="form-group row"></div>
+            <div class="form-group row"></div>
+            <div class="form-group row"></div>
+
+            <div class="form-group_1">
+                
+                <label class="label">Credit Cards #</label>
+                <input class="form-control " placeholder="Credit Card 1# (Required)" name="creditcardnum1" value="" type="text"
+                       required="required" maxlength=16>
+            </div>
+
+            <div class="form-group_1">
+                
+                <input class="form-control " placeholder="Credit Card 2# (Optinal)" name="creditcardnum2" value="" type="text"
+                        maxlength=16>
+            </div>
+            <div class="form-group_1">
+                
+                <input class="form-control " placeholder="Credit Card 3# (Optinal)" name="creditcardnum3" value="" type="text"
+                    maxlength=16>
+            </div>
+            <div class="form-group_1">
+                
+                <input class="form-control " placeholder="Credit Card 4# (Optinal)" name="creditcardnum4" value="" type="text"
+                    maxlength=16>
+            </div>
+            <div class="form-group_1">
+                
+                <input class="form-control " placeholder="Credit Card 5# (Optinal)" name="creditcardnum5" value="" type="text"
+                       maxlength=16>
+            </div>
+            <div class="form-group row"></div>
+
+            
+
+
+            <div class="form-group_1">
+                <a class="btn btn-primary btn-block" href="register_navigation.html"><span></span>
+                    Back</a>
+            </div>
+            <!-- <div class = "form-group_1"></div> -->
+            <div class="form-group row"></div>
+            <div class="form-group_1">
+                <input type="submit" class="btn btn-primary btn-block" value="Register">
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}

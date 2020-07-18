@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Schedule Movie{% endblock %}
+{% block content %}
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="login-card card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Schedule Movie</center></h3>
+    </div>
+    <div class="card-body">
+        <form role="form" method="post">
+            <style>
+                .form-group {
+                    width:48%;
+                    margin: 1%;
+                    /* height:400px; */
+                    /* background-color:#0f0; */
+                    float:left;
+                }
+                .form-group_1{
+                    width:97%;
+                    margin:1%;
+                    float:left;
+                }
+                .form-group_2{
+                    width:28%;
+                    margin: 2%;
+                    float:left;
+                }
+            </style>
+
+{#            <div class="form-group">#}
+{#                <label>Name</label>#}
+{#                <input class="form-control" placeholder="Name" name="movName" autofocus="" type="text"#}
+{#                       required="required" maxlength=50>#}
+{#            </div>#}
+            <div class="form-group_1">
+                <label>Name</label>
+                <select name="movName" class="form-control" required>
+                    {% for it in MOVIE %}
+                    <option>{{it}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group_1">
+                <label>Release Date</label>
+                <input name="movReleaseDate" id="date" type="date" value="2019-12-02">
+            </div>
+
+
+            <div class="form-group_1">
+                <label>Play Date</label>
+                <input name="movPlayDate" id="date" type="date" value="2019-12-02">
+            </div>
+
+
+            <div class="form-group_1">
+                <a class="btn btn-primary btn-block" onClick="javascript :history.back(-1)"><span></span>
+                    Back</a>
+            </div>
+            <div class="form-group_1">
+                <input type="submit" class="btn btn-primary btn-block" value="Create">
+            </div>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

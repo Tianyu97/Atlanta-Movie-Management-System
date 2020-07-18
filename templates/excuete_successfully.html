@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Excuete Successfully{% endblock %}
+{% block content %}
+
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="login-card card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Congratulations!!!</center></h3>
+        <h5 class="title"><center>Your process has been executed successfully</center></h5>
+        
+
+    </div>
+    <div class="card-body">
+            <div class="form-group row"></div>
+            <div class="form-group row"></div>
+            
+        <h6 class="title">Please press the button below and back</h6>
+    
+        <form role="form" method="post">
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" onClick="javascript :history.back(-2)"><span></span>
+                    Back</a>
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}

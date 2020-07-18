@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Manager Theater Overview Filter Results{% endblock %}
+
+{% block content %}
+
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="card form-card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Manager Theater Overview Filter Results</center></h3>
+    </div>
+    <div class="card-body">
+        <h4>
+            All Results
+        </h4>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Movie Name</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Release Date</th>
+                <th scope="col">Play Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {%for i in range(manager_theater_overview_results[0]| length) %}
+                <tr>
+                    <td scope="row">{{ manager_theater_overview_results[0][i] }}</td>
+                    <td>{{ manager_theater_overview_results[1][i] }}</td>
+                    <td>{{ manager_theater_overview_results[2][i] }}</td>
+                    <td>{{ manager_theater_overview_results[3][i] }}</td>
+                </tr>
+            {% endfor %}
+
+
+            
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+

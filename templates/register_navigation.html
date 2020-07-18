@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Register Navigation{% endblock %}
+{% block content %}
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="login-card card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Register Navigation</center></h3>
+    </div>
+    <div class="card-body">
+        <form role="form" method="post">
+
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" href="user_registration.html"><span></span>
+                    User Only</a>
+            </div>
+
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" href="customer_only_registration.html"><span></span>
+                    Customer Only</a>
+            </div>
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" href="manager_only_registration.html"><span></span>
+                    Manager Only</a>
+            </div>
+
+
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" href="manager_customer_registration.html"><span></span>
+                    Manager-Customer</a>
+            </div>
+
+
+            <div class="form-group">
+                <a class="btn btn-primary btn-block" href="login.html"><span></span>
+                    Back</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

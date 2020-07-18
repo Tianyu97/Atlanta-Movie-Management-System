@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}View History{% endblock %}
+
+{% block content %}
+
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<!-- 
+<div class="login-card card"> -->
+<div class="card form-card">
+    <div class="card-header">
+        <h3 class="panel-title"><center>View History</center></h3>
+    </div>
+    <div class="card-body">
+        <h4>
+            All Results
+        </h4>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">Movie</th>
+                <th scope="col">Theater</th>
+                <th scope="col">Company</th>
+                <th scope="col">Card#</th>
+                <th scope="col">View Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {%for i in range(to_view_history[0]| length) %}
+                <tr>
+                    <td scope="row">{{ to_view_history[0][i] }}</td>
+                    <td>{{ to_view_history[1][i] }}</td>
+                    <td>{{ to_view_history[2][i] }}</td>
+                    <td>{{ to_view_history[3][i] }}</td>
+                    <td>{{ to_view_history[4][i] }}</td>
+
+                </tr>
+            {% endfor %}
+
+
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}
+

@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% block title %}Admin Create Theater{% endblock %}
+{% block content %}
+
+<div class="nav-item"><a class="nav-link" href="logout"><span class="fa fa-sign-out-alt"></span> Logout
+</a></div>
+<h3 align="center" margin="auto"> Welcome to Team 26 Atlanta Movie Management System </h3>
+<div class="card form-card_1">
+    <div class="card-header">
+        <h3 class="panel-title"><center>Admin Create Theater</center></h3>
+    </div>
+    <div class="card-body">
+        <form role="form" method="post">
+            <style>
+                .form-group {
+                    width:48%;
+                    margin: 1%;
+                    /* height:400px; */
+                    /* background-color:#0f0; */
+                    float:left;
+                }
+                .form-group_1{
+                    width:97%;
+                    margin:1%;
+                    float:left;
+                }
+                .form-group_2{
+                    width:28%;
+                    margin: 2%;
+                    float:left;
+                }
+            </style>
+
+
+
+            <div class="form-group_1">
+                <label>Name</label>
+                <input class="form-control" placeholder="" name="thName" autofocus="" type="text"
+                       required="required" maxlength=50>
+            </div>
+
+            <div class="form-group_1">
+                <label>Company</label>
+                <select name="comName" class="form-control" required>
+                    {% for it in COMPANY %}
+                    <option>{{it}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-group_1">
+                <label>Street Address</label>
+                <i aria-hidden="true"></i>
+                <input class="form-control " placeholder="" name="thStreet" value="" type="text"
+                       required="required" maxlength=50>
+            </div>
+
+            <div class="form-group">
+                <label>City</label>
+                <input class="form-control" placeholder="" name="thCity" value="" type="text"
+                       required="required" maxlength=50>
+            </div>
+            <div class="form-group">
+                <label>Capcity</label>
+                <input class="form-control" placeholder="" name="capacity" value="" type="text"
+                       required="required" maxlength=50>
+            </div>
+
+            <div class="form-group">
+                <label>State</label>
+                <select name="thState" class="form-control" required>
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AZ</option>
+                    <option>AR</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>IA</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>ME</option>
+                    <option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MO</option>
+                    <option>NE</option>
+                    <option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TD</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WV</option>
+                    <option>WI</option>
+                    <option>WY</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Zipcode</label>
+                <i></i>
+<!--                <label>Zipcode</label>-->
+                <input class="form-control " placeholder="" name="thZipcode" value="" type="text"
+                       required="required" maxlength=5>
+            </div>
+
+            <div class="form-group_1">
+                <label>Manager</label>
+                <select name="managerUsername" class="form-control" required>
+                    {% for it in MANAGER %}
+                    <option>{{it}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+<!--            href="admin_customer_functionality.html"-->
+            <div class="form-group_1">
+                <a type="submit" class="btn btn-primary btn-block"  onClick="javascript :history.back(-1)"><span></span>
+                    Back</a>
+            </div>
+            <div class="form-group_1">
+                <input type="submit" class="btn btn-primary btn-block" value="Create">
+            </div>
+
+
+
+
+        </form>
+    </div>
+</div>
+{% endblock %}
