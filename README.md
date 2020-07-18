@@ -23,3 +23,14 @@ APP Technologies Used
 1. Database & Data Management Systems: MySQL v8.0 or later
 2. Back End Technologies: Python (Flask, PyMySQL)
 3. Web Applications: HTML/CSS/JavaScript/Bootstrap
+
+## relevant pages screen shot
+![image](https://github.com/Tianyu97/Atlanta-Movie-Management-System/blob/master/images/home_page.png)
+![image](https://github.com/Tianyu97/Atlanta-Movie-Management-System/blob/master/images/functionality_page.png)
+![image](https://github.com/Tianyu97/Atlanta-Movie-Management-System/blob/master/images/theater_overview_page.png)
+![image](https://github.com/Tianyu97/Atlanta-Movie-Management-System/blob/master/images/theater_overview_filter_results.png)
+![image](https://github.com/Tianyu97/Atlanta-Movie-Management-System/blob/master/images/explore_movie_page.png)
+
+## relevant video show about the web app
+https://github.com/Tianyu97/Atlanta-Movie-Management-System/blob/master/app_show_video.mp4
+
